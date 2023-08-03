@@ -51,13 +51,11 @@
                     // Verifica se as senhas são iguais
                     if ($senha !== $confirma_senha) {
                         // Exibe a mensagem de erro
-                        header('Location: cadastro.php?fail=true');
+                        header('Location: cadastro.php?fail=senha');
                     } else if ($email !== $confirma_email) {
                         // Verifica se os e-mails são iguais
-                        // Exibe a mensagem de erro
-                        echo "<div class='dio'>Os e-mails digitados não coincidem. Por favor, tente novamente.</div>";
-                        // Chama a função JS para ocultar a mensagem após um tempo
-                        echo "<script>hideErrorMessage();</script>";
+                        
+                        header('Location: cadastro.php?fail=email');
                     } else {
                         // Conexão com o banco de dados (substitua pelas suas informações)
                         $servername = "localhost";

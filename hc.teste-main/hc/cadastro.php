@@ -24,7 +24,13 @@
 <body>
     <?php 
     if (isset($_GET['fail'])) {
-        echo "<div class='dio'>As senhas digitadas não coincidem. Por favor, tente novamente.</div>";
+       
+        if ($_GET['fail'] == 'senha') {
+            echo "<div class='dio'>As senhas digitadas não coincidem. Por favor, tente novamente.</div>";
+        }if ($_GET['fail'] == 'email') {
+            echo "<div class='dio'>Os emails digitados não coincidem. Por favor, tente novamente.</div>";
+        } 
+    
     }
     
     

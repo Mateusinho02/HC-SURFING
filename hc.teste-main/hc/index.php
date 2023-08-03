@@ -19,28 +19,32 @@
         <a href="#" class="logo">Hot Coast Surfing</a>
         <ul class="links">
           <li><a href="#">Fiverr BusIness</a></li>
-          <li><a href="#">Sobre Nós</a></li>
+          <li><a href="sobre.php">Sobre Nós</a></li>
           <li class="language">
             <a href="#"></a>  
             <span class="material-symbols-outlined"></span>          
           </li>
-          <?php 
-            if (isset($_SESSION['idUsuario'])) {
-              echo "<li><a href='agendamentorole.php'>Agendamento Rolê</a></li>";
-              echo "<li class='btn join'><a href='sair.php'>SAIR</a></li>";
-              echo "<li class='dropdown'>
-                      <a href='javascript:void(0);' class='dropbtn'>Bem-vindo, " . $_SESSION['nomeUsuario'] . "</a>
-                      <div class='dropdown-content'>
-                        <a href='#'>.</a>
-                        <a href='#'>.</a>
-                      </div>
-                    </li>"; // Exibindo o dropdown com informações do usuário
-            } else {
-              echo "<li><a href='cadastro.php'>Agendamento Rolê</a></li>";
-              echo "<li class='btn signin'><a href='cadastro.php'>Cadastro</a></li>";
-              echo "<li class='btn join'><a href='login.php'>Login</a></li>";
-            }
-          ?>
+          <!-- ... -->
+<!-- ... -->
+<?php 
+  if (isset($_SESSION['idUsuario'])) {
+    echo "<li><a href='agendamentorole.php'>Agendamento Rolê</a></li>";
+    echo "<li class='dropdown'>
+            <a href='javascript:void(0);' class='dropbtn'>Bem-vindo, " . $_SESSION['nomeUsuario'] . "</a>
+            <div class='dropdown-content'>
+              <a href='sair.php'><i class='material-icons-outlined'>logout</i> Sair</a>
+            </div>
+          </li>"; // Exibindo o dropdown com informações do usuário e o link de SAIR
+  } else {
+    echo "<li><a href='cadastro.php'>Agendamento Rolê</a></li>";
+    echo "<li class='btn signin'><a href='cadastro.php'>Cadastro</a></li>";
+    echo "<li class='btn join'><a href='login.php'>Login</a></li>";
+  }
+?>
+<!-- ... -->
+
+<!-- ... -->
+
         </ul>
       </nav>
     </header>
