@@ -9,6 +9,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Fira Sans', sans-serif;
+   
+    
 }
 
 body {
@@ -20,6 +22,7 @@ body {
     width: 100%;
     margin: 0 auto;
     padding: 0 20px;
+    color: #19a463;
 }
 
 /* Navbar styling */
@@ -81,6 +84,8 @@ body {
     border-color: transparent;
 }
 
+
+
 .dropdown {
     position: relative;
     display: inline-block;
@@ -139,12 +144,25 @@ body {
     top: 30%;
 }
 
+.content h4{
+    font-size: 1.rem;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.08rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
+  
+    margin-bottom: 1.6rem;
+    color: #19a463;
+}
+
 .content h2 {
     color: #fff;
     font-size: 3rem;
     width: 600px;
     line-height: 65px;
 }
+
 
 .content .search-field {
     display: flex;
@@ -213,6 +231,37 @@ body {
     background: #fff;
     color: #000;
 }
+
+.botaofaleconosco {
+    background: none;
+    border: none;
+    margin-bottom: 3rem;
+    padding: 1.5rem 1rem;
+    width: fit-content;
+    color: var(--primary-color);
+    font-size: 1.4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.6rem;
+    position: relative;
+    transition: 400ms;
+    cursor: pointer; /* Adicionando cursor de ponteiro ao passar o mouse */
+    border-bottom: 2px solid var(--primary-color); /* Adicionando a linha inicial */
+    border-radius: 0.5rem; /* Adicionando bordas arredondadas à caixa */
+}
+
+.botaofaleconosco:hover {
+    background: #1dbf73; /* Mudando a cor de fundo ao passar o mouse */
+    color: #fff; /* Mudando a cor do texto ao passar o mouse */
+    border-bottom: none; /* Removendo a linha inferior ao passar o mouse */
+    padding: 1.6rem 3rem; /* Aumentando o preenchimento para formar um quadrado */
+}
+
+
 
 @media (max-width: 900px) {
     .hero {
